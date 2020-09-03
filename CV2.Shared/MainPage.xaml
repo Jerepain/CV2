@@ -6,23 +6,151 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Resources>
+        <Style TargetType="Image">
+            <Setter Property="Height" Value="500"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+        <Style TargetType="StackPanel">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="TitleStyle" BasedOn="{StaticResource TitleTextBlockStyle}" >
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="SubtitleStyle" BasedOn="{StaticResource SubtitleTextBlockStyle}" >
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="SubheaderStyle" BasedOn="{StaticResource SubheaderTextBlockStyle}" >
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+    </Page.Resources>
+    <!--<ScrollViewer Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">-->
+    <ScrollViewer HorizontalScrollMode="Enabled" Margin="0,20,0,0">
+        <StackPanel Margin="0,0,20,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel>
-		    <TextBlock Text="Always trying to find the best way to add value to your project in several ways :" Margin="20"  />
-		    <TextBlock Text="&#x27A4; Define with you the best way to answer your actual needs"   />
-		    <TextBlock Text="&#x27A4; Write maintanable and good quality code (software craftsmanship,
-CleanCode, TDD, BDD...)" />
-		    <TextBlock Text="&#x27A4; Improve the team skills (pair programming, reviews)" />
-		    <TextBlock Text="&#x27A4; Make your place a nice place to work :)"/>
-            
-            <TextBlock>I can code in any language (no allegiance to anybody), nevertheless
-I am expert in the .NET ecosystem : WPF, UWP, Xamarin.Forms,
-ASP.NET Core.</TextBlock>
-            
-            <TextBlock Text="Experience"/>
-            
-            
+                <TextBlock Style="{StaticResource HeaderTextBlockStyle}" FontWeight="Bold" Text="Ingénieur en développement logiciel .NET" HorizontalAlignment="Center"/>
+                <TextBlock Grid.Row="1" Style="{StaticResource SubheaderStyle}" Text="Je crée des applications mobile et bureautique, et j'adore ça !" Margin="10"/>
+
+                <Grid Grid.Row="2" HorizontalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+               
+                <Border Margin="10" Grid.Row="2" CornerRadius="50" Width="100" Height="100" >
+                    <Border.Background>
+                        <ImageBrush  ImageSource="ms-appx:///Assets/avatar.jpg" />
+                    </Border.Background>
+                </Border>
+                <HyperlinkButton Margin="10" Grid.Column="1" HorizontalAlignment="Center" NavigateUri="https://www.linkedin.com/in/jeremythiriet/">
+                    <Image Source="Assets/linkedin.png" Height="50"/>
+                </HyperlinkButton>
+ </Grid>
+
+                <Grid Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="ms-appx:///Assets/net.png" />
+                    <Image Grid.Column="3" Source="ms-appx:///Assets/uno.png" />
+                    <Image Grid.Column="2" Source="ms-appx:///Assets/xamarin.png" />
+                    <Image Grid.Column="1" Source="ms-appx:///Assets/wpf.png" />
+                </Grid>
+                <Image Grid.Row="4" Source="ms-appx:///Assets/mobile.jpg" Height="700" />
+
+                <!--<Image Source="ms-appx:///Assets/hero.svg" Stretch="UniformToFill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>-->
+
+            </Grid>
+
+            <StackPanel Margin="0,50,0,0">
+                <StackPanel.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Offset="0.1" Color="DarkViolet" />
+                            <GradientStop Offset="1" Color="BlueViolet" />
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <StackPanel.Resources>
+                    <Style TargetType="TextBlock" >
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                        <Setter Property="TextAlignment" Value="Center"/>
+                        <Setter Property="Margin" Value="10"/>
+                        <Setter Property="TextWrapping" Value="Wrap"/>
+                    </Style>
+                </StackPanel.Resources>
+                <TextBlock Text="Bonjour, je suis Jérémy. Ravi de vous rencontrer." Style="{StaticResource TitleStyle}" Foreground="White" FontWeight="Bold" Margin="10" HorizontalAlignment="Center"/>
+                <TextBlock Text="Je développe des applications .NET professionnelles depuis 2012 avec pour objectif d'ajouter de la valeur. J'accorde une forte importance à une ambiance collaborative positive permettant de tirer une équipe vers le haut. Un code de qualité, facilement compréhensible et maintenable est pour moi une forme de respect entre collaborateurs (notamment via le TDD et le CleanCode)."/>
+                <TextBlock Margin="5" Text="Expert sur la plateforme .NET (C#) dans les technologies suivantes :"/>
+                <TextBlock Margin="5" Text="→ Mobile iOS/Android/UWP avec Xamarin Forms et Uno"/>
+                <TextBlock Margin="5" Text="→ Client Lourd avec WPF et UWP"/>
+                <TextBlock Margin="5" Text="→ ASP.NET Core côté serveur"/>
+                <TextBlock Margin="10" Text="Géographiquement je suis disponible dans le Nord Isère (autour de Crémieu) et peux me déplacer de Montluel à Bourgoin-Jallieu et l'Est Lyonnais. Je suis également habitué au télétravail depuis 3 ans." />
+            </StackPanel>
+            <TextBlock Text="Mes projets récents" Style="{StaticResource TitleStyle}"/>
+            <TextBlock Style="{StaticResource SubtitleStyle}" Text="Agri"/>
+            <TextBlock Text="App Android + iOS permettant la génération de bons de livraison de céréales pour les agriculteurs. Cette app permet entre autres la sélection du silo de livraison sur une map, la génération / consultation des bons de livraison." />
+            <TextBlock Text="Technos : Azure, Xamarin.Forms, Web API, C#"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Image Source="ms-appx:///Assets/agri/Menu.png" Height="500"/>
+                <Image Grid.Column="1" Source="ms-appx:///Assets/agri/Synthese.png" Height="500"/>
+                <Image Grid.Column="2" Source="ms-appx:///Assets/agri/Tickets.png" Height="500"/>
+                <Image Grid.Column="3" Source="ms-appx:///Assets/agri/Articles.png" Height="500"/>
+
+                <Image Grid.Row="1" Source="ms-appx:///Assets/agri/Communes.png" Height="500"/>
+                <Image Grid.Column="1" Grid.Row="1" Source="ms-appx:///Assets/agri/Map.png" Height="500"/>
+                <Image Grid.Column="2" Grid.Row="1" Source="ms-appx:///Assets/agri/Silo.png" Height="500"/>
+                <Image Grid.Column="3" Grid.Row="1" Source="ms-appx:///Assets/agri/QR.png" Height="500"/>
+            </Grid>
+
+
+
+            <Border BorderBrush="Gray" BorderThickness="1" Margin="0,10"/>
+
+            <TextBlock Style="{StaticResource SubtitleStyle}" Text="Locbus"/>
+            <TextBlock Text="Développement de fonctionnalités pour un système de gestion de parc de bus."/>
+            <TextBlock Text="Technos : C#, WPF, Web API en ASP.NET Core, Entity Framework"/>
+            <Image Source="ms-appx:///Assets/locbus/Locbus.png" Height="500"/>
+
+            <Border BorderBrush="Gray" BorderThickness="1" Margin="0,10"/>
+
+            <TextBlock Text="Volley" Style="{StaticResource SubtitleStyle}"/>
+            <TextBlock TextWrapping="WrapWholeWords">
+                <Span xml:space="preserve"><Run>Cliquez </Run><Hyperlink NavigateUri="https://moonheadprod.azurewebsites.net/volley.html">ici</Hyperlink><Run> pour jouer !</Run></Span>
+            </TextBlock>
+            <TextBlock Text="Technos : Unity, C#"/>
+
+
+            <Image Source="ms-appx:///Assets/volley.png" Height="500"/>
         </StackPanel>
-    </Grid>
+    </ScrollViewer>
 </Page>

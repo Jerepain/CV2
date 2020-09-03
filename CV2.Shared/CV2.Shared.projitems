@@ -28,10 +28,35 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-	<ItemGroup>
-		<None Include="$(MSBuildThisFileDirectory)Assets\SharedAssets.md" />
-	</ItemGroup>
-	<ItemGroup>
-		<PRIResource Include="$(MSBuildThisFileDirectory)Strings\en\Resources.resw" />
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Assets\hero.svg" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\mf-avatar.svg" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\SharedAssets.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\mobile.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\avatar.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\agri\Apport.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\agri\Articles.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\agri\Communes.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\agri\Contrat.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\agri\Familles.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\agri\Map.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\agri\Menu.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\agri\QR.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\agri\Silo.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\agri\Synthese.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\agri\Tickets.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\dev.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\linkedin.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\locbus\Locbus.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\net.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\uno.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\volley.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\wpf.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\xamarin.png" />
+  </ItemGroup>
 </Project>
